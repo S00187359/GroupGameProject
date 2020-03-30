@@ -5,32 +5,27 @@ using UnityEngine;
 public class Camera_Movement : MonoBehaviour
 {
     float horizontal, vertical, rotation;
-    public float movementSpeed, rotationSpeed;
-    Vector3 nextTranslation;
+    public float rotationSpeed;
+    
     Vector3 nextRotation;
     void Update()
     {
-        nextTranslation = Vector3.zero;
+       
         nextRotation = Vector3.zero;
 
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
+       
         rotation = Input.GetAxisRaw("Rotate");
+        
 
-        nextTranslation.x = horizontal;
-        nextTranslation.z = vertical;
+      
 
-        nextTranslation *= movementSpeed * Time.deltaTime;
-
-        if (nextTranslation != Vector3.zero)
-        {
-            transform.Translate(nextTranslation);
-        }
+        
 
         nextRotation.y = rotation * rotationSpeed * Time.deltaTime;
+  
         transform.Rotate(nextRotation);
 
-        Camera.main.transform.LookAt(transform);
+
 
     }
 }

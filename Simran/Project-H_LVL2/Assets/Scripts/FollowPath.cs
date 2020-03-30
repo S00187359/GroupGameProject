@@ -1,0 +1,37 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FollowPath : MonoBehaviour
+{
+    public PathNode CurrentNode;
+    bool shouldMove = true;
+
+    Vector3 direction;
+
+    private void Update()
+    {
+        if (shouldMove)
+        {
+            direction = CurrentNode.transform.position - transform.position;
+            transform.position += direction.normalized * CurrentNode.Speed * Time.deltaTime;
+            transform.forward = direction;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PathNode") && other.gameObject.name == CurrentNode.name)
+        {
+            PathNode node;
+
+            if (other.TryGetComponent<PathNode>(out node))
+            {
+                if (node.NextNode != null)
+                    CurrentNode = node.NextNode;
+                else
+                    shouldMove = false;
+            }
+        }
+    }
+}

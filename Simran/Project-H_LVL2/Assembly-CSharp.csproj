@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Camera_Movement.cs" />
+     <Compile Include="Assets\Scripts\FollowPath.cs" />
+     <Compile Include="Assets\Scripts\PathNode.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Gaming PC/Documents/GitHub/GroupGameProject/Simran/Project-H_LVL2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
