@@ -6,6 +6,7 @@ public class Ai_Distanace_Move : NavMeshMover
 {
     public string trackTag = "Player";
     GameObject trackedPlayer;
+  
     public float trackingDistance = 4;
     public override void Start()
     {

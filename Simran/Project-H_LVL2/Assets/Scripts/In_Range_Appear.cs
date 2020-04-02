@@ -9,7 +9,7 @@ public class In_Range_Appear : MonoBehaviour
     string trackTag = "Player";
     MeshRenderer mesh;
 
-    GameObject Player;
+    protected GameObject Player;
 
     // Start is called before the first frame update
     public void Start()
@@ -21,7 +21,7 @@ public class In_Range_Appear : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void Update()
+    public virtual void Update()
     {
         
         if (Vector3.Distance(transform.position, Player.transform.position) <= trackingDistance)
