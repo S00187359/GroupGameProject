@@ -270,11 +270,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackingDistance: 40
-  laserSpeed: 50
+  laserSpeed: 200
   bulletObject: {fileID: 7336747235786665297, guid: 4e62ea6c0bb88aa488c96e89eb9407d4,
     type: 3}
   spawnPoint: {fileID: 5639189004830810737}
-  firerate: 0.2
+  firerate: 0.7
   laserDirection: {x: 0, y: 0, z: 0}
   laserSource: {fileID: 5639189004830810738}
 --- !u!65 &5639189005168828281
