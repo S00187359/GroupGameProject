@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scripts\NavMeshMover.cs" />
      <Compile Include="Assets\Scripts\PathNode.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Ship.cs" />
      <None Include="Assets\ImportAssets\Sci-Fi Styled Modular Pack\Readme.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Gaming PC/Documents/GitHub/GroupGameProject/Simran/Project-H_LVL2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
