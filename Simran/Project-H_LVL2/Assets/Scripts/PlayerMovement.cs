@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
         {
             direction = CurrentNode.transform.position - transform.position;
             transform.position += direction.normalized * CurrentNode.Speed * Time.deltaTime;
-            transform.forward = direction;
+            //transform.forward = direction;
         }
     }
 

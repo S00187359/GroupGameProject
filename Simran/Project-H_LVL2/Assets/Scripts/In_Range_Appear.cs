@@ -9,6 +9,7 @@ public class In_Range_Appear : MonoBehaviour
     string trackTag = "Player";
     MeshRenderer mesh;
     Light Enemylight;
+    
 
     protected GameObject Player;
 
