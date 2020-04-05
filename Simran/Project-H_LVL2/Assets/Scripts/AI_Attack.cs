@@ -9,7 +9,7 @@ public class AI_Attack : In_Range_Appear
     public Transform spawnPoint;
     public float firerate;
     private float timeToShoot;
-    public Vector3 laserDirection;
+    
     public GameObject laserSource;
 
   

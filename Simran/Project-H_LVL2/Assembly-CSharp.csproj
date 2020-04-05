@@ -72,11 +72,16 @@
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\Camera_Movement.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
+     <Compile Include="Assets\Scripts\HealthComponent.cs" />
      <Compile Include="Assets\Scripts\In_Range_Appear.cs" />
      <Compile Include="Assets\Scripts\NavMeshMover.cs" />
      <Compile Include="Assets\Scripts\PathNode.cs" />
+     <Compile Include="Assets\Scripts\Pistol.cs" />
+     <Compile Include="Assets\Scripts\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\RayCastWeapon.cs" />
      <Compile Include="Assets\Scripts\Ship.cs" />
+     <Compile Include="Assets\Scripts\Weapon.cs" />
      <None Include="Assets\ImportAssets\Sci-Fi Styled Modular Pack\Readme.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Gaming PC/Documents/GitHub/GroupGameProject/Simran/Project-H_LVL2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
