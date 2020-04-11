@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class RayCastWeapon : Weapon
 {
-    protected RaycastHit raycastHit;
-    public float Range;
-    public float DamagePerHit;
+    //protected RaycastHit raycastHit;
+    //public float Range;
+    //public float DamagePerHit;
 
-    protected void ApplyDamage(HealthComponent healthComponent)
-    {
-        healthComponent.ApplyDamage(DamagePerHit);
-    }
+    //protected void ApplyDamage(HealthComponent healthComponent)
+    //{
+    //    healthComponent.ApplyDamage(DamagePerHit);
+    //}
 }

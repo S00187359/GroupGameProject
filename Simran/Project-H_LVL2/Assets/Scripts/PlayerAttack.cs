@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public Weapon[] weapons;
-    int activeWeaponIndex = -1;
-    Weapon activeWeapon;
+   
 
     public float laserSpeed = 5;
     public GameObject bulletObject;
@@ -14,9 +12,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform spawnPoint2;
     public float firerate;
     private float timeToShoot;
-
-    
-
+    public int bulletCount = 100;
 
 
     public GameObject laserSource;
@@ -24,7 +20,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Start()
     {
-        SetActiveWeapon(0);
+        
     }
 
     void Update()
@@ -36,8 +32,9 @@ public class PlayerAttack : MonoBehaviour
         {
            
 
-            if (timeToShoot <= Time.time)
+            if (timeToShoot <= Time.time && bulletCount > 0)
             {
+                bulletCount -= 2;
                 GameObject go = Instantiate(bulletObject, laserSource.transform.position, this.transform.rotation);
                 GameObject go2 = Instantiate(bulletObject, laserSource2.transform.position, this.transform.rotation);
                 go.GetComponent<Bullet>().speed = laserSpeed;
@@ -49,50 +46,12 @@ public class PlayerAttack : MonoBehaviour
             }
                
             
-            if (activeWeapon)
-            {
-                activeWeapon.Fire(transform.position);
-
-            }
+           
         }
 
       
 
     }
 
-
-
-    private void HandleWeaponSwitching()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SetActiveWeapon(0);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SetActiveWeapon(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            SetActiveWeapon(2);
-        }
-
-
-
-    }
-
-    private void SetActiveWeapon(int index)
-    {
-        if (index >= 0 && index <= weapons.Length)
-        {
-            if (activeWeapon)
-            {
-                Destroy(activeWeapon.gameObject);
-            }
-
-            activeWeapon = Instantiate(weapons[index], transform);
-            activeWeaponIndex = index;
-
-        }
-    }
+   
 }

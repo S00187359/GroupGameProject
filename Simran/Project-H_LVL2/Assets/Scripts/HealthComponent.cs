@@ -5,13 +5,24 @@ using UnityEngine;
 public class HealthComponent : MonoBehaviour
 {
     public float Health = 1.0f;
-    
 
-    public void ApplyDamage(float amount)
+
+    //public void ApplyDamage(float amount)
+    //{
+    //    Health -= amount;
+
+    //    if (Health <= 0)
+    //        Destroy(gameObject);
+    //}
+
+    private void OnCollisionEnter(Collision collision)
     {
-        Health -= amount;
+        if (collision.gameObject.tag == "Bullet")
+        {
+            Health--;
 
-        if (Health <= 0)
+            if (Health <= 0)
             Destroy(gameObject);
+        }
     }
 }

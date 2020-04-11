@@ -9,6 +9,12 @@ public class Camera_Movement : MonoBehaviour
 
     
     Vector3 nextRotation;
+
+    void Start()
+    {
+        Cursor.visible = false;
+    }
+
     void Update()
     {
        
