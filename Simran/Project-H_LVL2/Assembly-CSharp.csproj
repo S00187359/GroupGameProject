@@ -81,6 +81,7 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\RayCastWeapon.cs" />
      <Compile Include="Assets\Scripts\Ship.cs" />
+     <Compile Include="Assets\Scripts\TextDisplay.cs" />
      <Compile Include="Assets\Scripts\Weapon.cs" />
      <None Include="Assets\ImportAssets\Sci-Fi Styled Modular Pack\Readme.txt" />
  <Reference Include="Unity.Timeline.Editor">
