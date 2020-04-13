@@ -1,43 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class HealthComponent : MonoBehaviour
 {
-    public float maxHealth = 100f;
-    private float health;
-    public bool hasHealthBar;
-    public Image healthBar;
+    public float Health = 1.0f;
+    
 
-
-    //public void ApplyDamage(float amount)
-    //{
-    //    Health -= amount;
-
-    //    if (Health <= 0)
-    //        Destroy(gameObject);
-    //}
-
-    void Start()
+    public void ApplyDamage(float amount)
     {
-        health = maxHealth;
-    }
+        Health -= amount;
 
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Bullet")
-        {
-            health--;
-
-            if (health <= 0)
+        if (Health <= 0)
             Destroy(gameObject);
-        }
-
-        if (hasHealthBar)
-        {
-            healthBar.fillAmount = health / maxHealth;
-        }
     }
 }
