@@ -8,7 +8,7 @@ public class In_Range_Appear : MonoBehaviour
     public float trackingDistance = 0;
     string trackTag = "Player";
     MeshRenderer mesh;
-   
+    Light Enemylight;
     
 
     protected GameObject Player;
@@ -19,7 +19,7 @@ public class In_Range_Appear : MonoBehaviour
         
         Player = GameObject.FindGameObjectWithTag(trackTag);
         mesh = GetComponent<MeshRenderer>();
-      
+        Enemylight = GetComponent<Light>();
            
     }
 
@@ -30,12 +30,12 @@ public class In_Range_Appear : MonoBehaviour
         if (Vector3.Distance(transform.position, Player.transform.position) <= trackingDistance)
         {
             mesh.enabled = true;
-            
+            Enemylight.enabled = true;
         }
         else
         {
             mesh.enabled = false;
-            
+            Enemylight.enabled = false;
         }
     }
 }
